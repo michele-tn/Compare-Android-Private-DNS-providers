@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare 48 documented Android Private DNS hostnames, filtering categories, provider portals and diagnostic tools.">
+  <meta name="theme-color" content="#07111f">
+  <title>Android Private DNS | Detailed comparison</title>
+  <style>
+    :root{--bg:#07111f;--panel:#0e1b2d;--panel2:#13243a;--ink:#f4f7fb;--muted:#9fb0c6;--line:#223650;--accent:#54e0b5;--accent2:#78a9ff;--warn:#ffcc66;--danger:#ff7e8b;--shadow:0 24px 80px #0006;color-scheme:dark}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% -10%,#17365b 0,transparent 36rem),var(--bg);color:var(--ink);font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:var(--accent2)}button,input,select{font:inherit}button{cursor:pointer}.wrap{max-width:1180px;margin:auto;padding:0 22px}.topbar{padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-weight:850;letter-spacing:.03em}.brand span{color:var(--accent)}.top-actions{display:flex;gap:10px}.icon-btn,.ghost{background:#ffffff08;color:var(--ink);border:1px solid var(--line);border-radius:11px;padding:9px 13px}.hero{padding:64px 0 38px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:end}.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.15em;font-size:.76rem}.hero h1{font-size:clamp(2.7rem,7vw,5.8rem);line-height:.97;letter-spacing:-.075em;margin:14px 0 20px;max-width:800px}.hero h1 em{font-style:normal;color:var(--accent)}.lede{font-size:1.16rem;color:var(--muted);max-width:700px}.hero-card{background:linear-gradient(145deg,#163a50,#102238);border:1px solid #315878;border-radius:24px;padding:24px;box-shadow:var(--shadow)}.hero-card strong{font-size:2.3rem;display:block;line-height:1}.hero-card small{color:var(--muted)}.hero-card .meter{height:8px;background:#ffffff12;border-radius:99px;margin:20px 0 10px;overflow:hidden}.meter i{display:block;width:86%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px}.notice{display:flex;gap:13px;align-items:flex-start;background:#17283f;border:1px solid #314968;padding:16px 18px;border-radius:16px;margin:10px 0 34px}.notice b{color:var(--warn)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:42px 0 18px}.section-head h2{font-size:2rem;letter-spacing:-.04em;margin:0}.section-head p{color:var(--muted);margin:0}.controls{display:grid;grid-template-columns:1.5fr .7fr auto;gap:12px;margin:20px 0}.field{background:var(--panel);border:1px solid var(--line);border-radius:13px;color:var(--ink);padding:13px 15px;width:100%}.field:focus{outline:2px solid var(--accent);outline-offset:2px}.filter-btn{background:var(--accent);border:0;color:#062019;font-weight:800;border-radius:13px;padding:0 18px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 25px}.chip{border:1px solid var(--line);background:#ffffff07;color:var(--muted);border-radius:99px;padding:7px 12px}.chip.active{background:#204c4b;color:var(--accent);border-color:#3b8c79}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(180deg,#11223a,#0c1727);border:1px solid var(--line);border-radius:19px;padding:19px;display:flex;flex-direction:column;min-height:255px;transition:.2s transform,.2s border-color}.card:hover{transform:translateY(-3px);border-color:#467399}.card-top{display:flex;justify-content:space-between;gap:10px}.provider{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent2);font-weight:800}.tag{font-size:.72rem;border-radius:99px;padding:3px 8px;background:#ffffff0d;color:var(--muted);white-space:nowrap}.card h3{font-size:1.28rem;margin:12px 0 4px}.scope{color:var(--muted);font-size:.9rem;min-height:44px}.host{margin-top:auto;display:flex;align-items:center;gap:8px;background:#06101d;border:1px solid #203450;border-radius:11px;padding:11px;word-break:break-all}.host code{font-size:.93rem;flex:1;color:#d7e8ff}.copy{background:#203754;border:1px solid #386187;color:var(--ink);border-radius:8px;padding:6px 9px}.copy.copied{background:#1c6d58;color:#fff}.meta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:.8rem;margin-top:11px}.empty{grid-column:1/-1;padding:38px;text-align:center;background:var(--panel);border-radius:16px;color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.number{color:var(--accent);font-size:1.7rem;font-weight:900}.step h3{margin:4px 0 5px}.step p{color:var(--muted);font-size:.92rem;margin:0}.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}.panel h3{margin-top:0}.panel p,.panel li{color:var(--muted)}.panel code{color:var(--accent);background:#07111f;padding:2px 5px;border-radius:5px}.table-wrap{overflow:auto}.compare{width:100%;border-collapse:collapse;min-width:650px}.compare th,.compare td{text-align:left;border-bottom:1px solid var(--line);padding:12px}.compare th{color:var(--accent);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}.faq details{border-bottom:1px solid var(--line);padding:15px 0}.faq summary{cursor:pointer;font-weight:750}.faq p{color:var(--muted);max-width:850px}.sources{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.source{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px}.source a{font-weight:750}.source small{display:block;color:var(--muted);margin-top:5px}.footer{border-top:1px solid var(--line);margin-top:60px;padding:27px 0 44px;color:var(--muted);font-size:.9rem}.toast{position:fixed;right:22px;bottom:22px;background:#dffbf2;color:#062019;border-radius:12px;padding:12px 16px;font-weight:750;transform:translateY(90px);transition:.25s;z-index:5}.toast.show{transform:translateY(0)}.light{--bg:#f4f8fc;--panel:#fff;--panel2:#eaf2fb;--ink:#132238;--muted:#5e7189;--line:#d7e2ef;--shadow:0 24px 70px #36506b22;color-scheme:light}.light body{background:var(--bg)}.light .card,.light .hero-card{background:#fff}.light .host,.light .panel code{background:#edf4fb}.light .notice{background:#edf6f4}.light .host code{color:#132238}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:35px}.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.sources{grid-template-columns:1fr 1fr}.controls{grid-template-columns:1fr 1fr}.filter-btn{padding:12px}.section-head{display:block}.section-head p{margin-top:6px}}
+    @media(max-width:560px){.wrap{padding:0 16px}.topbar{align-items:flex-start}.hero h1{font-size:3.3rem}.grid,.split,.sources{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.controls{grid-template-columns:1fr}.filter-btn{padding:12px}.hero-card{padding:18px}}
+  
+    :root{--accent:#70edc8;--accent2:#92baff}
+    .light{--accent:#126d55;--accent2:#285c9c;--warn:#895709}
+    [hidden]{display:none!important}section{scroll-margin-top:20px}
+    a,button,input,select{touch-action:manipulation}a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+    .skip-link{position:absolute;left:15px;top:-100px;z-index:10;padding:10px;background:var(--panel)}.skip-link:focus{top:10px}
+    .topbar{flex-wrap:wrap}.top-actions{flex-wrap:wrap;align-items:center}.ghost{text-decoration:none}.hero{padding-top:38px}.hero-card .stat{font-size:1.45rem;margin-top:16px}
+    .quick-nav{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.subtle{color:var(--muted)}.small{font-size:.87rem}
+    .controls{grid-template-columns:1.4fr 1fr 1fr auto;align-items:end}.controls label{font-size:.85rem;color:var(--muted)}.controls .field{margin-top:5px}.filter-btn{min-height:52px}
+    .card{min-width:0}.card-top{flex-wrap:wrap}.host code{min-width:0;overflow-wrap:anywhere}.host{margin-top:14px}.card .scope{min-height:0}.card .note{font-size:.85rem;color:var(--muted);margin:10px 0}
+    .card-links{display:flex;gap:8px 16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px;margin-top:auto;font-size:.86rem}
+    .good{color:var(--accent)}.status{color:var(--warn)}.badge-row{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+    .badge{border:1px solid var(--line);border-radius:5px;padding:3px 6px;font-size:.75rem}
+    .pagination{display:flex;justify-content:center;gap:14px;align-items:center;margin:22px 0}
+    .table-wrap{max-height:680px;padding:0;overscroll-behavior:contain}.compare{min-width:2100px;font-size:.86rem}
+    .compare caption{text-align:left;padding:16px;background:var(--panel);color:var(--muted)}
+    .compare th{white-space:nowrap}.compare thead th{position:sticky;top:0;z-index:2;background:var(--panel2)}
+    .compare tbody th{position:sticky;left:0;background:var(--panel);z-index:1;min-width:195px;max-width:220px;white-space:normal;color:var(--ink);text-transform:none;letter-spacing:0}
+    .compare td{vertical-align:top}.compare code{display:block;overflow-wrap:anywhere;max-width:300px;margin-bottom:8px}
+    .compare td.notes-cell{min-width:240px;max-width:320px}.compare a{display:inline-block;margin:4px 10px 4px 0}
+    .compare tbody tr:hover td,.compare tbody tr:hover th{background:var(--panel2)}.compare small{display:block;color:var(--muted)}
+    .matrix-controls{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:12px 0}
+    .legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:.86rem}
+    .source{min-width:0}.source .tag{display:inline-block;margin-bottom:8px}.source h3{font-size:1.05rem;margin:0 0 8px}.source p{font-size:.88rem;color:var(--muted);margin:8px 0}.source code{overflow-wrap:anywhere;font-size:.86rem}.source a{overflow-wrap:anywhere}
+    .source-links{display:flex;gap:12px;flex-wrap:wrap;font-size:.85rem}.personal{margin-top:16px}
+    .light .notice{border-color:var(--line)}.light .copy{background:#e0edf9;color:var(--ink)}.light .chip.active{background:#d9f2e9;color:var(--accent);border-color:var(--accent)}.light .filter-btn{background:#126d55;color:white}
+    .toast{max-width:calc(100vw - 44px);pointer-events:none}.toast.error{background:#ffe1e1;color:#5b111c}
+    @media(max-width:850px){.controls{grid-template-columns:1fr 1fr}.compare tbody th{min-width:155px}}
+    @media(max-width:560px){.controls{grid-template-columns:1fr}.top-actions{font-size:.85rem}.steps{grid-template-columns:1fr}.hero h1{font-size:3.2rem}.compare tbody th{min-width:125px;max-width:150px}.table-wrap{max-height:570px}.hero{padding-top:26px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.card:hover{transform:none}}
+    @media print{body{background:white;color:black}.top-actions,.controls,.chips,.copy,.pagination,.toast,.quick-nav,#cards{display:none}.table-wrap{max-height:none;overflow:visible}.compare{min-width:0;font-size:7pt}.compare th,.compare td{position:static!important;padding:3px}.compare thead th,.compare tbody th{background:white}.panel{border-color:#bbb}.compare td.notes-cell{min-width:0}.wrap{max-width:none;padding:0}}
+  </style>
+  <link rel="stylesheet" href="guide.css">
+</head>
+<body>
+  <a class="skip-link" href="#directory">Skip to the directory</a>
+  <header class="wrap topbar">
+    <div class="brand">ANDROID PRIVATE DNS <span>GUIDE</span></div>
+    <nav class="top-actions" aria-label="Guide sections">
+      <a class="ghost" href="#finder">Find my DNS</a><a class="ghost" href="#shortlist">My comparison</a><a class="ghost" href="#privacy">Privacy</a><a class="ghost" href="#tools">Test tools</a>
+      <button class="icon-btn" id="theme" aria-pressed="false">Light theme</button>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Android 9+ · Private DNS · independent field guide</div>
+        <h1>Compare Android<br><em>Private DNS providers.</em></h1>
+        <p class="lede">A detailed comparison of filtering features, service limits and the exact hostnames to enter in Android’s Private DNS settings. Every entry links to its provider and official documentation.</p>
+        <div class="quick-nav"><a class="primary-link" href="#finder">Find a matching profile →</a><a class="ghost" href="#directory">All hostnames</a><a class="ghost" href="#setup">Setup guide</a></div>
+      </div>
+      <aside class="hero-card" aria-label="Directory statistics">
+        <strong id="count">48</strong><small>documented public hostnames</small>
+        <strong class="stat" id="ad-count">25</strong><small>include an advertised ad-blocking category</small>
+        <p class="small subtle"><span id="provider-count">10</span> public providers · <a href="#personal">3 personal setup options</a><br>Documentation reviewed <time datetime="2026-09-15">15 September 2026</time>.</p>
+      </aside>
+    </section>
+    <div class="notice"><div aria-hidden="true">ⓘ</div><div><b>Paste one hostname.</b> Use the Android “Private DNS provider hostname” field. Omit <code>https://</code>, <code>tls://</code>, IP addresses, ports and paths. A provider portal is a website to visit; the hostname is the value to copy. <a href="https://developers.google.com/speed/public-dns/docs/using#android" target="_blank" rel="noopener noreferrer">Official Android setup</a>.</div></div>
+    <div class="notice"><div aria-hidden="true">!</div><div><b>Mullvad service change:</b> its six public encrypted DNS profiles are scheduled to close on <time datetime="2026-11-02">2 November 2026</time>. They remain labelled for existing users; choose another provider for a new setup. <a href="https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead" target="_blank" rel="noopener noreferrer">Read the official announcement</a>.</div></div>
+
+    <nav class="journey" aria-label="Your setup journey"><a href="#finder"><span>01</span> Choose</a><a href="#shortlist"><span>02</span> Compare</a><a href="#setup"><span>03</span> Configure</a><a href="#test-plan"><span>04</span> Verify</a><a href="#recovery">Connection help</a></nav>
+
+    <section id="finder" aria-labelledby="finder-title">
+      <div class="section-head"><div><div class="eyebrow">Start with your needs</div><h2 id="finder-title">Find your DNS</h2><p>A transparent match, not a speed or privacy ranking.</p></div></div>
+      <form id="finder-form" class="panel">
+        <div class="finder-fields">
+          <label for="finder-purpose">What matters most?<select id="finder-purpose" class="field"><option value="ads">Block ads and trackers</option><option value="family">Restrict adult content</option><option value="threat">Block malicious domains</option><option value="unfiltered">No advertised content filtering</option></select></label>
+          <label for="finder-rules">Do you need your own exceptions?<select id="finder-rules" class="field"><option value="public">No — a shared public preset is fine</option><option value="personal">Yes — I need an allowlist or custom rules</option></select></label>
+          <label class="check-label" id="finder-ads-label" hidden><input type="checkbox" id="finder-ads" checked> Also require ad blocking</label>
+          <button class="filter-btn" type="submit">Show my matches</button>
+        </div>
+        <p class="small subtle">Matches require the selected advertised categories. Closing services are excluded. Examples span up to three operators; fewer extra categories are shown first, then provider name. This does not measure false positives, latency or reliability.</p>
+      </form>
+      <p id="finder-status" role="status" class="small subtle"></p>
+      <div id="finder-results" class="grid"></div>
+      <noscript><p>Use the <a href="directory.html">complete text directory</a> to choose by filtering category without JavaScript.</p></noscript>
+    </section>
+
+    <section id="shortlist" aria-labelledby="shortlist-title">
+      <div class="section-head"><div><div class="eyebrow">Your decision, side by side</div><h2 id="shortlist-title">My comparison</h2><p>Select two to four profiles using “Compare” on any card.</p></div><span class="tag" id="shortlist-count" role="status">0 / 4 selected</span></div>
+      <div class="matrix-controls"><label class="check-label"><input type="checkbox" id="differences"> Show differences only</label><div class="action-row"><button class="ghost" id="share-comparison">Copy share link</button><button class="ghost" id="clear-comparison">Clear comparison</button></div></div>
+      <p class="small subtle">Share links include selected public hostnames and search/category/provider filters, not favorites or the favorites-only filter. Filters do not remove profiles from this comparison. On phones, swipe inside the table; feature names stay pinned.</p>
+      <div id="selected-profiles" class="selected-profiles"></div>
+      <p id="shortlist-hint" class="small subtle" role="status"></p>
+      <div class="panel shortlist-scroll" tabindex="0" role="region" aria-label="Selected profiles side-by-side comparison"><table class="shortlist-table" id="shortlist-table"><caption>Compare filtering, access and provider-declared privacy.</caption><thead id="shortlist-head"></thead><tbody id="shortlist-body"></tbody></table><p id="shortlist-empty">Your comparison is empty. <a href="#directory">Browse profiles</a> or use the finder above.</p></div>
+    </section>
+
+    <section id="directory" aria-labelledby="directory-title">
+      <div class="section-head"><div><h2 id="directory-title">Find your DNS profile</h2><p>Ad blocking, family protection and general DNS all have different jobs.</p></div><span id="result" class="tag" role="status" aria-live="polite"></span></div>
+      <div class="controls">
+        <label for="search">Search the directory<input class="field" id="search" type="search" placeholder="Provider, hostname, HaGeZi, SafeSearch…" autocomplete="off"></label>
+        <label for="provider">Provider<select class="field" id="provider"><option value="all">All providers</option></select></label>
+        <label for="sort">Sort profiles<select class="field" id="sort"><option value="guide">Guide order</option><option value="provider">Provider A–Z</option><option value="host">Hostname A–Z</option></select></label>
+        <button class="filter-btn" id="reset">Reset filters</button>
+      </div>
+      <div class="chips" role="group" aria-label="Filter by purpose">
+        <button class="chip active" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" data-filter="ads" aria-pressed="false">Ad blocking</button>
+        <button class="chip" data-filter="threat" aria-pressed="false">Threat protection</button>
+        <button class="chip" data-filter="adult" aria-pressed="false">Adult content</button>
+        <button class="chip" data-filter="social" aria-pressed="false">Social restrictions</button>
+        <button class="chip" data-filter="unfiltered" aria-pressed="false">Unfiltered</button>
+        <button class="chip" data-filter="retiring" aria-pressed="false">Closing services</button>
+      </div>
+      <p class="small subtle">The same filters apply to the <a href="#compare">comparison table</a>. “Documented” means listed by the operator, not a live availability test on your phone. Hostnames under one provider are filter profiles, not separate companies.</p>
+      <div class="matrix-controls"><label class="check-label"><input type="checkbox" id="favorites-only"> Show favorites only <span id="favorite-count">(0)</span></label><a href="directory.html">Complete text directory / print view ↗</a></div>
+      <div class="grid" id="cards"></div>
+      <div class="pagination"><button class="ghost" id="more">Show more profiles</button><span class="small subtle" id="page-count"></span></div>
+      <noscript><div class="notice">Search and interactive comparison need JavaScript. All 48 hostnames, filtering categories, sources and privacy notes are available in the <a href="directory.html">complete text directory</a>.</div></noscript>
+    </section>
+
+    <section id="compare" aria-labelledby="compare-title">
+      <div class="section-head"><div><h2 id="compare-title">Compare every detail</h2><p>One row per hostname. Scroll horizontally to inspect all 15 columns.</p></div><button class="ghost" id="export">Download filtered CSV</button></div>
+      <div class="matrix-controls">
+        <div class="legend"><span><b class="good">Yes</b> = documented category</span><span>— = not advertised for this profile</span><span>SafeSearch = supported search / video services only</span></div>
+        <span id="table-count" class="tag"></span>
+      </div>
+      <details class="panel column-picker"><summary>Choose visible columns</summary><p class="small subtle">Provider and hostname stay visible. CSV always includes all fields.</p><div id="column-options" class="column-options"></div><button class="ghost" id="all-columns">Show all columns</button></details>
+      <p class="small subtle">A category is not a guarantee that every domain is blocked. No universal speed score is given: routing, network and location affect performance. All public rows support DoT and need no personal configuration ID. A dash does not prove an individual domain will be allowed.</p>
+      <div class="panel table-wrap" tabindex="0" role="region" aria-label="Scrollable DNS profile comparison">
+        <table class="compare">
+          <caption>Public hostname comparison — filtered by the controls above. Public services are free; usage restrictions appear in the access and limits columns.</caption>
+          <thead><tr><th scope="col">Provider / profile</th><th scope="col">Android hostname</th><th scope="col">Ads</th><th scope="col">Trackers</th><th scope="col">Threats</th><th scope="col">Adult</th><th scope="col">Gambling</th><th scope="col">Social</th><th scope="col">SafeSearch</th><th scope="col">Purpose</th><th scope="col">Access</th><th scope="col">Lifecycle</th><th scope="col">Profile notes</th><th scope="col">Service limits / policy</th><th scope="col">Official links</th></tr></thead>
+          <tbody id="comparison-body"></tbody>
+        </table>
+      </div>
+      <div class="split">
+        <article class="panel"><h3>Choose by the result you need</h3><p>For advertising, start with a row marked <b>Ads: Yes</b>. A security resolver such as Quad9 or Cloudflare Security focuses on malicious domains. Family filtering adds restrictions on content; it is not automatically an ad blocker.</p></article>
+        <article class="panel"><h3>Understand list variants</h3><p>Control D hosts several community blocklists. Their maintainers and the DNS operator are different parties. HaGeZi TIF targets threats; the Light → Ultimate variants include ad filtering. More aggressive filtering can interrupt useful app features. <a href="https://github.com/hagezi/dns-blocklists" target="_blank" rel="noopener noreferrer">Maintainer's comparison</a>.</p></article>
+      </div>
+    </section>
+
+    <section id="privacy" aria-labelledby="privacy-title">
+      <div class="section-head"><div><div class="eyebrow">Know who answers your queries</div><h2 id="privacy-title">Privacy, with context</h2><p>Public resolver policies are not the same as paid account or website policies.</p></div></div>
+      <div class="notice"><div aria-hidden="true">ⓘ</div><div><b>Declared, not independently verified here.</b> The notes below summarize operator publications reviewed on 15 September 2026. “Not established” is a research gap, not proof that a safeguard is absent. Operator location does not establish where every query is processed. No privacy score or audit certification is awarded by this guide.</div></div>
+      <div id="privacy-cards" class="privacy-grid"></div>
+      <noscript><p>Read all privacy notes in the <a href="directory.html#privacy">text edition</a>.</p></noscript>
+      <details class="panel"><summary>What the evidence labels mean</summary><dl class="facts"><dt>Operator declaration</dt><dd>A linked policy or technical document says this. It is not a measurement by this guide.</dd><dt>Audit evidence</dt><dd>An audit must identify its scope and period. A VPN audit is not automatically an audit of a public DNS resolver. Linked resources have not been independently assessed here.</dd><dt>Technical availability</dt><dd>No per-hostname live DoT check is included in this edition. A successful link check only shows that a source webpage responded; it does not test DNS, filtering or privacy.</dd><dt>Review date</dt><dd>The date of source review, not a promise of future availability. Recheck sources before depending on a service.</dd></dl></details>
+    </section>
+
+    <section id="personal">
+      <div class="section-head"><div><h2>Want your own rules?</h2><p>Three personal setup options, separate from the 48 public hostnames.</p></div></div>
+      <div class="sources personal">
+        <article class="source"><span class="tag">Personal ID required</span><h3>NextDNS</h3><code>&lt;PROFILE-ID&gt;.dns.nextdns.io</code><p>Choose blocklists, allow exceptions and configure logs in your profile. Registration saves the configuration. The free tier allows 300,000 queries per month; after that, resolution continues without filtering.</p><div class="source-links"><a href="https://nextdns.io/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://my.nextdns.io/" target="_blank" rel="noopener noreferrer">Get your hostname ↗</a><a href="https://nextdns.io/pricing" target="_blank" rel="noopener noreferrer">Quota details ↗</a></div></article>
+        <article class="source"><span class="tag">Device ID required</span><h3>AdGuard Private DNS</h3><code>&lt;DEVICE-ID&gt;.d.adguard-dns.com</code><p>Create a server and device in the dashboard, then copy its DoT hostname. Rules and filtering depend on your configuration. This is separate from the free public presets; check your current plan limits.</p><div class="source-links"><a href="https://adguard-dns.io/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://adguard-dns.io/dashboard/" target="_blank" rel="noopener noreferrer">Dashboard ↗</a><a href="https://adguard-dns.io/kb/private-dns/connect-devices/mobile-and-desktop/android/" target="_blank" rel="noopener noreferrer">Android documentation ↗</a></div></article>
+        <article class="source"><span class="tag">Endpoint ID required</span><h3>Control D Personal</h3><code>&lt;ENDPOINT-ID&gt;.dns.controld.com</code><p>Use the unique DoT hostname supplied for your endpoint. Custom policies require an account and an applicable plan. Public “x-” list presets above do not provide your own allowlist.</p><div class="source-links"><a href="https://controld.com/personal" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://docs.controld.com/docs/android-platform" target="_blank" rel="noopener noreferrer">Android documentation ↗</a><a href="https://docs.controld.com/docs/linux-platform" target="_blank" rel="noopener noreferrer">Endpoint format ↗</a></div></article>
+      </div>
+      <p class="small subtle">These are format examples, not ready-to-use hostnames. Obtain your actual value from the provider. They deliberately have no copy button and are not counted as public servers.</p>
+    </section>
+
+    <section id="setup">
+      <div class="section-head"><div><h2>Set it up in under a minute</h2><p>On Android 9 or later, search Settings for “Private DNS”.</p></div></div>
+      <div class="steps">
+        <div class="step"><div class="number">01</div><h3>Choose a profile</h3><p>Compare its filtering categories. Copy the bare hostname from a card or table row.</p></div>
+        <div class="step"><div class="number">02</div><h3>Open Private DNS</h3><p>Settings → Network & internet. Samsung may place it under Connections → More connection settings.</p></div>
+        <div class="step"><div class="number">03</div><h3>Paste & save</h3><p>Select “Private DNS provider hostname”. Paste exactly one value and select Save.</p></div>
+        <div class="step"><div class="number">04</div><h3>Verify on your phone</h3><p>Use the tools below on Wi-Fi and mobile data. Check normal browsing as well as filtering.</p></div>
+      </div>
+      <p class="small subtle"><a href="https://adguard-dns.io/en/public-dns.html" target="_blank" rel="noopener noreferrer">AdGuard Android steps</a> · <a href="https://support.google.com/pixelphone/answer/2819583" target="_blank" rel="noopener noreferrer">Google network settings</a>.</p>
+      <div class="split setup-illustration">
+        <figure class="phone-panel"><figcaption>Illustration — menu wording varies by phone</figcaption><div class="phone-screen"><div class="small subtle">Network &amp; internet</div><h3>Private DNS</h3><p class="mock-option">○ Off</p><p class="mock-option">○ Automatic</p><p class="mock-option good">● Private DNS provider hostname</p><div class="mock-input"><code>dns.adguard-dns.com</code></div><p class="small subtle">One hostname. No scheme, port or path.</p><div class="mock-save">Save on your phone</div></div></figure>
+        <div class="panel"><h3>Check your pasted value</h3><p>This local format checker does not change Android settings or contact a resolver.</p><form id="hostname-form"><label for="hostname-check">Private DNS hostname</label><input class="field" id="hostname-check" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="dns.adguard-dns.com" aria-describedby="hostname-feedback"><button class="ghost" type="submit">Check format</button></form><p id="hostname-feedback" role="status">Enter a value to check its format and catalog match.</p><p class="small subtle">A valid format is not proof that a server exists or supports DoT. Obtain personalized hostnames directly from the provider; never paste an example containing angle brackets.</p></div>
+      </div>
+      <details class="panel recovery" id="recovery"><summary>Connection stopped working? Restore your settings</summary><ol><li>Before changing DNS, note the previous mode and hostname. Do not share a personal configuration ID publicly.</li><li>If connection fails, return to Settings → Private DNS and restore those previous settings.</li><li>If you previously used Automatic, choose Automatic again. This removes the chosen custom filter and encryption to a specific provider is no longer guaranteed.</li><li>Complete any Wi-Fi sign-in page, check spelling, and try another network. Then retry a documented hostname.</li></ol><p>A site cannot change this setting for you. <a href="https://developers.google.com/speed/public-dns/docs/using#android" target="_blank" rel="noopener noreferrer">Official Android configuration reference ↗</a></p></details>
+      <div class="split">
+        <article class="panel"><h3>Hostname, URL or blocklist?</h3><p><code>dns.adguard-dns.com</code> fits Android Private DNS. A DNS-over-HTTPS URL belongs in a compatible browser or app. A hosts file or downloadable blocklist requires filtering software; it cannot be pasted into this Android field.</p></article>
+        <article class="panel"><h3>DNS has a specific reach</h3><p>DNS filtering blocks domain lookups. It cannot reliably remove ads served from the same domains as the content, including many YouTube ads. It also does not hide your IP address or prevent browser fingerprinting. <a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank" rel="noopener noreferrer">DNS filtering limitations</a>.</p></article>
+      </div>
+    </section>
+
+    <section id="tools">
+      <div class="section-head"><div><h2>Test the right thing</h2><p>Provider diagnostics, independent checks and a research tool — each measures something different.</p></div></div>
+      <div class="panel" id="test-plan"><h3>Your verification checklist</h3><p class="small subtle">Manual observations only. Checking these boxes does not run tests or certify the phone. Progress stays in this tab until reload.</p><div class="test-checklist">
+        <label><input type="checkbox" data-test-step><span><b>1. Confirm the intended resolver</b><small>Use a provider diagnostic or DNSLeakTest below. Check your actual VPN and browser Secure DNS configuration; a browser result is not a whole-phone guarantee.</small></span></label>
+        <label><input type="checkbox" data-test-step><span><b>2. Check an advertising sample</b><small>Run d3ward with your browser setup noted. Extensions can affect the result; a sample percentage is not internet-wide coverage. No need to visit unsafe sites.</small></span></label>
+        <label><input type="checkbox" data-test-step><span><b>3. Test everyday apps</b><small>Try sign-in, messaging, payments and media you normally use. If something breaks, consult Connection help and try a less restrictive profile.</small></span></label>
+        <label><input type="checkbox" data-test-step><span><b>4. Repeat on both networks</b><small>Repeat on Wi-Fi and mobile data. Record the date, provider and network if comparing results over time.</small></span></label>
+      </div><p id="test-progress" role="status">0 of 4 steps marked as reviewed.</p><button class="ghost" id="reset-tests">Reset checklist</button></div>
+      <div class="sources">
+        <article class="source"><span class="tag">Official · provider diagnostics</span><h3><a href="https://adguard.com/en/test.html" target="_blank" rel="noopener noreferrer">AdGuard diagnostics ↗</a></h3><p>Inspect AdGuard DNS, app and extension status separately. A DNS connection does not mean the AdGuard browser extension is installed, and this is not a universal blocking score.</p></article>
+        <article class="source"><span class="tag">Independent · open source</span><h3><a href="https://d3ward.github.io/toolz/adblock.html" target="_blank" rel="noopener noreferrer">d3ward Ad Block Test ↗</a></h3><p>Checks a sample of advertising and tracking requests. Results reflect your browser, extensions, DNS and network together. A percentage applies to this sample, not the whole internet.</p></article>
+        <article class="source"><span class="tag">Nonprofit · privacy research</span><h3><a href="https://coveryourtracks.eff.org/" target="_blank" rel="noopener noreferrer">EFF Cover Your Tracks ↗</a></h3><p>Tests tracking protection and browser fingerprinting. DNS filtering alone cannot fix a distinctive fingerprint. The test contributes data to EFF's research; see its <a href="https://coveryourtracks.eff.org/about" target="_blank" rel="noopener noreferrer">methodology</a>.</p></article>
+        <article class="source"><span class="tag">Official · NextDNS</span><h3><a href="https://test.nextdns.io/" target="_blank" rel="noopener noreferrer">NextDNS connection status ↗</a></h3><p>Inspect the connection's reported status and protocol when using NextDNS. It does not benchmark how many ads are blocked.</p></article>
+        <article class="source"><span class="tag">Official · Cloudflare</span><h3><a href="https://1.1.1.1/help" target="_blank" rel="noopener noreferrer">Cloudflare connection check ↗</a></h3><p>Checks whether Cloudflare DNS is in use and reports protocol details. “No” can be expected when you intentionally use another provider. <a href="https://developers.cloudflare.com/1.1.1.1/check/" target="_blank" rel="noopener noreferrer">Documentation</a>.</p></article>
+        <article class="source"><span class="tag">Official · Mullvad</span><h3><a href="https://mullvad.net/en/check" target="_blank" rel="noopener noreferrer">Mullvad connection check ↗</a></h3><p>Inspect DNS resolvers and WebRTC results. Its VPN verdict is specific to Mullvad; a different intended DNS provider is not automatically a leak.</p></article>
+        <article class="source"><span class="tag">Independent · resolver discovery</span><h3><a href="https://www.dnsleaktest.com/" target="_blank" rel="noopener noreferrer">DNSLeakTest ↗</a></h3><p>Use Standard or Extended to see which resolvers answer browser-triggered lookups. Compare their operator with your intended setup.</p></article>
+        <article class="source"><span class="tag">Independent · browser diagnostics</span><h3><a href="https://browserleaks.com/dns" target="_blank" rel="noopener noreferrer">BrowserLeaks DNS ↗</a></h3><p>Provides another view of the resolvers visible from your browser. Hosting-network names may differ from the DNS service's brand.</p></article>
+        <article class="source"><span class="tag">Official · domain lookup</span><h3><a href="https://controld.com/free-dns" target="_blank" rel="noopener noreferrer">Control D filter checker ↗</a></h3><p>Check a domain against a selected public filter. This queries the provider's policy; it does not prove your Android phone is using that resolver.</p></article>
+      </div>
+      <div class="notice"><div aria-hidden="true">↗</div><div><b>Run tests on the Android device being configured.</b> Confirm resolver identity first, then test ad blocking and normal browsing. Browser Secure DNS, extensions and VPNs can change results. These links open external sites only when selected; the guide itself runs no background DNS or tracking tests.</div></div>
+    </section>
+
+    <section class="faq">
+      <div class="section-head"><div><h2>When something does not work</h2></div></div>
+      <div class="panel">
+        <details><summary>Android cannot connect to the Private DNS server</summary><p>Check the spelling, complete any Wi-Fi sign-in page, and try another network. A network may block TCP 853, or the resolver may be unavailable. Return to Private DNS → Automatic to restore the network's DNS, then try a different documented hostname.</p></details>
+        <details><summary>A site or app stopped working after enabling filtering</summary><p>Try a less restrictive profile from the same provider. Public presets normally do not offer your own exceptions; use a personal profile if you need an allowlist. Do not infer that a failed site is malicious solely because a blocklist contains it.</p></details>
+        <details><summary>Can I combine several hostnames or blocklists?</summary><p>Android accepts one provider hostname. Multiple profiles from the same operator are alternative configurations, not values to concatenate. Use a provider's configurable profile to combine lists. A bare blocklist URL is not a DNS resolver.</p></details>
+        <details><summary>Do VPNs or browser Secure DNS change the result?</summary><p>They can. The interaction depends on Android version and the VPN or browser. A browser using its own DNS-over-HTTPS provider can bypass your intended system resolver. Inspect the active resolver under the exact configuration you plan to use.</p></details>
+        <details><summary>Does a good leak test prove my entire phone uses DoT?</summary><p>No. A browser test observes lookups triggered by that browser. Other apps may use their own DNS. It also does not prove all ads are blocked or measure all network traffic.</p></details>
+        <details><summary>Why are some non-ad-blocking addresses included?</summary><p>They are useful for threat-only protection, family filtering, comparison or troubleshooting. Select “Ad blocking” to retain only profiles advertising that category. Google Public DNS, standard Cloudflare and the public Quad9 profiles are not general ad blockers.</p></details>
+      </div>
+    </section>
+
+    <section id="sources">
+      <div class="section-head"><div><h2>Provider portals & primary sources</h2><p>Every public profile above cites its operator. Community presets also cite the list maintainer.</p></div></div>
+      <div class="sources">
+        <article class="source"><h3>AdGuard DNS</h3><div class="source-links"><a href="https://adguard-dns.io/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://adguard-dns.io/en/public-dns.html" target="_blank" rel="noopener noreferrer">Hostname documentation ↗</a></div></article>
+        <article class="source"><h3>Control D</h3><div class="source-links"><a href="https://controld.com/free-dns" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://docs.controld.com/docs/free-dns" target="_blank" rel="noopener noreferrer">Hostname documentation ↗</a></div></article>
+        <article class="source"><h3>DNS4EU</h3><div class="source-links"><a href="https://joindns4.eu/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://joindns4.eu/for-public" target="_blank" rel="noopener noreferrer">Hostname documentation ↗</a></div></article>
+        <article class="source"><h3>dnsforge</h3><div class="source-links"><a href="https://dnsforge.de/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://dnsforge.de/" target="_blank" rel="noopener noreferrer">Hostname documentation ↗</a></div></article>
+        <article class="source"><h3>Quad9</h3><div class="source-links"><a href="https://quad9.net/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://docs.quad9.net/services/" target="_blank" rel="noopener noreferrer">Hostname documentation ↗</a></div></article>
+        <article class="source"><h3>Cloudflare</h3><div class="source-links"><a href="https://one.one.one.one/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://developers.cloudflare.com/1.1.1.1/setup/android/" target="_blank" rel="noopener noreferrer">Hostname documentation ↗</a></div></article>
+        <article class="source"><h3>CleanBrowsing</h3><div class="source-links"><a href="https://cleanbrowsing.org/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://cleanbrowsing.org/filters" target="_blank" rel="noopener noreferrer">Hostname documentation ↗</a></div></article>
+        <article class="source"><h3>Google Public DNS</h3><div class="source-links"><a href="https://developers.google.com/speed/public-dns" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://developers.google.com/speed/public-dns/docs/using" target="_blank" rel="noopener noreferrer">Hostname documentation ↗</a></div></article>
+        <article class="source"><h3>DNS.SB</h3><div class="source-links"><a href="https://dns.sb/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://dns.sb/dot/" target="_blank" rel="noopener noreferrer">Hostname documentation ↗</a></div></article>
+        <article class="source"><h3>Mullvad DNS</h3><div class="source-links"><a href="https://mullvad.net/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://mullvad.net/en/help/dns-over-https-and-dns-over-tls" target="_blank" rel="noopener noreferrer">Hostname documentation ↗</a></div><p><a href="https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead" target="_blank" rel="noopener noreferrer">Service closure announcement</a></p></article>
+        <article class="source"><h3>NextDNS</h3><div class="source-links"><a href="https://nextdns.io/" target="_blank" rel="noopener noreferrer">Provider portal ↗</a><a href="https://my.nextdns.io/" target="_blank" rel="noopener noreferrer">Profile setup ↗</a></div></article>
+        <article class="source"><h3>Android & the protocol</h3><div class="source-links"><a href="https://support.google.com/pixelphone/answer/2819583" target="_blank" rel="noopener noreferrer">Google Help ↗</a><a href="https://www.rfc-editor.org/rfc/rfc7858" target="_blank" rel="noopener noreferrer">RFC 7858: DoT ↗</a></div></article>
+      </div>
+      <p class="small subtle">Editorial method: operator-published DoT hostnames, explicit filtering categories and dated lifecycle notices. No invented performance rankings or accreditation labels. Primary-source review is separate from an independent uptime, privacy or security audit. Recheck the linked documentation when choosing a service.</p>
+    </section>
+  </main>
+  <footer class="wrap footer">Android Private DNS Guide · Reviewed 15 September 2026 · Independent reference; no affiliation with listed providers.<br><a href="#directory">Back to the directory ↑</a> · <a href="#sources">Sources</a> · <a href="directory.html">Text / print edition</a><p>Favorites and theme are stored only in this browser, when storage is available. No analytics or background diagnostic requests are added by this guide; the hosting provider may keep access logs. External tools have their own policies.</p><button class="ghost" id="clear-local">Clear saved favorites and theme</button><span id="storage-status" class="small subtle" role="status"></span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="application/json" id="catalog">
+{
+  "reviewed": "2026-09-15",
+  "providers": {
+    "adguard": {
+      "name": "AdGuard DNS",
+      "portal": "https://adguard-dns.io/",
+      "source": "https://adguard-dns.io/en/public-dns.html",
+      "access": "Free · no account",
+      "policy": "Public presets; personal rules require a separate profile."
+    },
+    "controld": {
+      "name": "Control D",
+      "portal": "https://controld.com/free-dns",
+      "source": "https://docs.controld.com/docs/free-dns",
+      "access": "Free · no account",
+      "policy": "Shared presets; no individual allowlist or query dashboard."
+    },
+    "dns4eu": {
+      "name": "DNS4EU",
+      "portal": "https://joindns4.eu/",
+      "source": "https://joindns4.eu/for-public",
+      "access": "Free · no account",
+      "policy": "EU infrastructure for individuals; legal blocking applies to all variants."
+    },
+    "dnsforge": {
+      "name": "dnsforge",
+      "portal": "https://dnsforge.de/",
+      "source": "https://dnsforge.de/",
+      "access": "Free · donations",
+      "policy": "Germany; provider states query logging is disabled. 100 queries / 10 seconds."
+    },
+    "quad9": {
+      "name": "Quad9",
+      "portal": "https://quad9.net/",
+      "source": "https://docs.quad9.net/services/",
+      "access": "Free · no account",
+      "policy": "Threat protection or unfiltered variants; no personal blocklists."
+    },
+    "cloudflare": {
+      "name": "Cloudflare",
+      "portal": "https://one.one.one.one/",
+      "source": "https://developers.cloudflare.com/1.1.1.1/setup/android/",
+      "access": "Free · no account",
+      "policy": "Fixed public profiles. Advertising is not a filtering category."
+    },
+    "cleanbrowsing": {
+      "name": "CleanBrowsing",
+      "portal": "https://cleanbrowsing.org/",
+      "source": "https://cleanbrowsing.org/filters",
+      "access": "Free · no account",
+      "policy": "Free household presets are throttled; custom policies require a paid plan."
+    },
+    "google": {
+      "name": "Google Public DNS",
+      "portal": "https://developers.google.com/speed/public-dns",
+      "source": "https://developers.google.com/speed/public-dns/docs/using",
+      "access": "Free · no account",
+      "policy": "General-purpose resolution; no personal content policy."
+    },
+    "dnssb": {
+      "name": "DNS.SB",
+      "portal": "https://dns.sb/",
+      "source": "https://dns.sb/dot/",
+      "access": "Free · no account",
+      "policy": "Global anycast; provider states no logging and DNSSEC validation."
+    },
+    "mullvad": {
+      "name": "Mullvad DNS",
+      "portal": "https://mullvad.net/",
+      "source": "https://mullvad.net/en/help/dns-over-https-and-dns-over-tls",
+      "access": "Free · no account",
+      "policy": "Public encrypted DNS closes 2 November 2026.",
+      "retires": "2026-11-02",
+      "notice": "https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead"
+    }
+  },
+  "entries": [
+    {
+      "provider": "adguard",
+      "name": "Default",
+      "host": "dns.adguard-dns.com",
+      "coverage": "111----",
+      "mode": "Ads & trackers",
+      "notes": "Ad, tracker and malware filtering, as described in the operator's policy.",
+      "categorySource": "https://adguard-dns.io/en/privacy.html"
+    },
+    {
+      "provider": "adguard",
+      "name": "Family",
+      "host": "family.adguard-dns.com",
+      "coverage": "1111--1",
+      "mode": "Family + ads",
+      "notes": "Ads, trackers and malware; adds adult filtering and supported SafeSearch / Safe Mode.",
+      "categorySource": "https://adguard-dns.io/en/privacy.html"
+    },
+    {
+      "provider": "dns4eu",
+      "name": "Protective + ads",
+      "host": "noads.joindns4.eu",
+      "coverage": "111----",
+      "mode": "Ads & trackers",
+      "notes": "Advertising and tracking filters with threat protection."
+    },
+    {
+      "provider": "dns4eu",
+      "name": "Child + ads",
+      "host": "child-noads.joindns4.eu",
+      "coverage": "1111---",
+      "mode": "Family + ads",
+      "notes": "Child protection and ad filtering together."
+    },
+    {
+      "provider": "dnsforge",
+      "name": "Normal",
+      "host": "dnsforge.de",
+      "coverage": "111----",
+      "mode": "Ads & trackers",
+      "notes": "General filtering with a provider-managed allowlist."
+    },
+    {
+      "provider": "dnsforge",
+      "name": "Clean",
+      "host": "clean.dnsforge.de",
+      "coverage": "11111-1",
+      "mode": "Family + ads",
+      "notes": "Adds adult / gambling filtering and SafeSearch."
+    },
+    {
+      "provider": "controld",
+      "name": "Ads & Tracking",
+      "host": "p2.freedns.controld.com",
+      "coverage": "111----",
+      "mode": "Ads & trackers",
+      "notes": "Native advertising, tracking and threat preset."
+    },
+    {
+      "provider": "controld",
+      "name": "Family Friendly",
+      "host": "family.freedns.controld.com",
+      "coverage": "1111---",
+      "mode": "Family + ads",
+      "notes": "Adds adult and drug-site filtering."
+    },
+    {
+      "provider": "controld",
+      "name": "OISD Full",
+      "host": "x-oisd.freedns.controld.com",
+      "coverage": "111----",
+      "mode": "Community list",
+      "notes": "Broad OISD preset.",
+      "listSource": "https://oisd.nl/"
+    },
+    {
+      "provider": "controld",
+      "name": "OISD Basic",
+      "host": "x-oisd-basic.freedns.controld.com",
+      "coverage": "11-----",
+      "mode": "Community list",
+      "notes": "Smaller OISD preset; not HaGeZi TIF.",
+      "listSource": "https://oisd.nl/"
+    },
+    {
+      "provider": "controld",
+      "name": "StevenBlack Unified",
+      "host": "x-stevenblack.freedns.controld.com",
+      "coverage": "111----",
+      "mode": "Community list",
+      "notes": "Base hosts list; optional extensions are separate.",
+      "listSource": "https://github.com/StevenBlack/hosts"
+    },
+    {
+      "provider": "controld",
+      "name": "1Hosts Lite",
+      "host": "x-1hosts-lite.freedns.controld.com",
+      "coverage": "111----",
+      "mode": "Community list",
+      "notes": "Balanced 1Hosts variant.",
+      "listSource": "https://github.com/badmojr/1Hosts"
+    },
+    {
+      "provider": "controld",
+      "name": "1Hosts Xtra",
+      "host": "x-1hosts-xtra.freedns.controld.com",
+      "coverage": "111----",
+      "mode": "Strict list",
+      "notes": "Aggressive variant; greater breakage risk.",
+      "listSource": "https://github.com/badmojr/1Hosts"
+    },
+    {
+      "provider": "controld",
+      "name": "HaGeZi Light",
+      "host": "x-hagezi-light.freedns.controld.com",
+      "coverage": "111----",
+      "mode": "Community list",
+      "notes": "Relaxed.",
+      "listSource": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "provider": "controld",
+      "name": "HaGeZi Normal",
+      "host": "x-hagezi-normal.freedns.controld.com",
+      "coverage": "111----",
+      "mode": "Community list",
+      "notes": "Relaxed to balanced.",
+      "listSource": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "provider": "controld",
+      "name": "HaGeZi Pro",
+      "host": "x-hagezi-pro.freedns.controld.com",
+      "coverage": "111----",
+      "mode": "Community list",
+      "notes": "Balanced; includes more telemetry.",
+      "listSource": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "provider": "controld",
+      "name": "HaGeZi Pro++",
+      "host": "x-hagezi-proplus.freedns.controld.com",
+      "coverage": "111----",
+      "mode": "Strict list",
+      "notes": "More aggressive.",
+      "listSource": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "provider": "controld",
+      "name": "HaGeZi Ultimate",
+      "host": "x-hagezi-ultimate.freedns.controld.com",
+      "coverage": "111----",
+      "mode": "Strict list",
+      "notes": "Strict; greater breakage risk.",
+      "listSource": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "provider": "controld",
+      "name": "HaGeZi TIF",
+      "host": "x-hagezi-tif.freedns.controld.com",
+      "coverage": "--1----",
+      "mode": "Threats only",
+      "notes": "Threat intelligence preset; not an ad-block list.",
+      "listSource": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "provider": "controld",
+      "name": "AdGuard Filter",
+      "host": "x-adguard.freedns.controld.com",
+      "coverage": "11-----",
+      "mode": "Community list",
+      "notes": "AdGuard list hosted by Control D.",
+      "listSource": "https://github.com/AdguardTeam/AdGuardSDNSFilter"
+    },
+    {
+      "provider": "dnsforge",
+      "name": "Hard",
+      "host": "hard.dnsforge.de",
+      "coverage": "111----",
+      "mode": "Strict list",
+      "notes": "Strict lists, no allowlist exceptions; some app features can break."
+    },
+    {
+      "provider": "dns4eu",
+      "name": "Protective",
+      "host": "protective.joindns4.eu",
+      "coverage": "--1----",
+      "mode": "Threats only",
+      "notes": "Threat protection without the ad-blocking category."
+    },
+    {
+      "provider": "dns4eu",
+      "name": "Child protection",
+      "host": "child.joindns4.eu",
+      "coverage": "--11---",
+      "mode": "Family",
+      "notes": "Threats plus child protection; no ad filter."
+    },
+    {
+      "provider": "controld",
+      "name": "Malware",
+      "host": "p1.freedns.controld.com",
+      "coverage": "--1----",
+      "mode": "Threats only",
+      "notes": "Native threat preset."
+    },
+    {
+      "provider": "controld",
+      "name": "Social",
+      "host": "p3.freedns.controld.com",
+      "coverage": "-----1-",
+      "mode": "Social",
+      "notes": "Social-site restrictions."
+    },
+    {
+      "provider": "quad9",
+      "name": "Secure",
+      "host": "dns.quad9.net",
+      "coverage": "--1----",
+      "mode": "Threats only",
+      "notes": "Threat filtering; does not serve as a general ad blocker."
+    },
+    {
+      "provider": "quad9",
+      "name": "Secure + ECS",
+      "host": "dns11.quad9.net",
+      "coverage": "--1----",
+      "mode": "Threats only",
+      "notes": "Adds EDNS Client Subnet to help CDN location selection."
+    },
+    {
+      "provider": "cloudflare",
+      "name": "Security",
+      "host": "security.cloudflare-dns.com",
+      "coverage": "--1----",
+      "mode": "Threats only",
+      "notes": "Malware category; no ad blocking."
+    },
+    {
+      "provider": "cloudflare",
+      "name": "Family",
+      "host": "family.cloudflare-dns.com",
+      "coverage": "--11---",
+      "mode": "Family",
+      "notes": "Malware and adult-content categories."
+    },
+    {
+      "provider": "cleanbrowsing",
+      "name": "Security",
+      "host": "security-filter-dns.cleanbrowsing.org",
+      "coverage": "--1----",
+      "mode": "Threats only",
+      "notes": "Malicious, phishing and spam domains."
+    },
+    {
+      "provider": "cleanbrowsing",
+      "name": "Adult",
+      "host": "adult-filter-dns.cleanbrowsing.org",
+      "coverage": "--11--1",
+      "mode": "Family",
+      "notes": "Adult + threats; Google / Bing SafeSearch; mixed-content sites allowed."
+    },
+    {
+      "provider": "cleanbrowsing",
+      "name": "Family",
+      "host": "family-filter-dns.cleanbrowsing.org",
+      "coverage": "--11--1",
+      "mode": "Family",
+      "notes": "Also restricts mixed-content and bypass domains; YouTube safety mode."
+    },
+    {
+      "provider": "adguard",
+      "name": "Unfiltered",
+      "host": "unfiltered.adguard-dns.com",
+      "coverage": "-------",
+      "mode": "Unfiltered",
+      "notes": "No content filtering."
+    },
+    {
+      "provider": "dns4eu",
+      "name": "Unfiltered",
+      "host": "unfiltered.joindns4.eu",
+      "coverage": "-------",
+      "mode": "Unfiltered",
+      "notes": "No optional content categories; legal blocking still applies."
+    },
+    {
+      "provider": "dnsforge",
+      "name": "Blank",
+      "host": "blank.dnsforge.de",
+      "coverage": "-------",
+      "mode": "Unfiltered",
+      "notes": "No content filters."
+    },
+    {
+      "provider": "controld",
+      "name": "Unfiltered",
+      "host": "p0.freedns.controld.com",
+      "coverage": "-------",
+      "mode": "Unfiltered",
+      "notes": "No optional content filters."
+    },
+    {
+      "provider": "controld",
+      "name": "Uncensored",
+      "host": "uncensored.freedns.controld.com",
+      "coverage": "-------",
+      "mode": "Special purpose",
+      "notes": "Special resolution for selected censored domains; not an ad filter."
+    },
+    {
+      "provider": "quad9",
+      "name": "No threat blocking",
+      "host": "dns10.quad9.net",
+      "coverage": "-------",
+      "mode": "Unfiltered",
+      "notes": "Resolution without the threat blocklist."
+    },
+    {
+      "provider": "quad9",
+      "name": "No threat blocking + ECS",
+      "host": "dns12.quad9.net",
+      "coverage": "-------",
+      "mode": "Unfiltered",
+      "notes": "Unfiltered variant with EDNS Client Subnet."
+    },
+    {
+      "provider": "cloudflare",
+      "name": "Standard",
+      "host": "one.one.one.one",
+      "coverage": "-------",
+      "mode": "Unfiltered",
+      "notes": "General DNS resolution."
+    },
+    {
+      "provider": "google",
+      "name": "Standard",
+      "host": "dns.google",
+      "coverage": "-------",
+      "mode": "Unfiltered",
+      "notes": "General DNS resolution, not ad blocking."
+    },
+    {
+      "provider": "dnssb",
+      "name": "Standard",
+      "host": "dot.sb",
+      "coverage": "-------",
+      "mode": "Unfiltered",
+      "notes": "General encrypted DNS; no ad-block category advertised."
+    },
+    {
+      "provider": "mullvad",
+      "name": "Ad-block",
+      "host": "adblock.dns.mullvad.net",
+      "coverage": "11-----",
+      "mode": "Ads & trackers",
+      "notes": "Ads and tracking."
+    },
+    {
+      "provider": "mullvad",
+      "name": "Base",
+      "host": "base.dns.mullvad.net",
+      "coverage": "111----",
+      "mode": "Ads & trackers",
+      "notes": "Adds malware blocking."
+    },
+    {
+      "provider": "mullvad",
+      "name": "Extended",
+      "host": "extended.dns.mullvad.net",
+      "coverage": "111--1-",
+      "mode": "Social + ads",
+      "notes": "Adds social restrictions."
+    },
+    {
+      "provider": "mullvad",
+      "name": "Family",
+      "host": "family.dns.mullvad.net",
+      "coverage": "11111--",
+      "mode": "Family + ads",
+      "notes": "Adult and gambling categories."
+    },
+    {
+      "provider": "mullvad",
+      "name": "All",
+      "host": "all.dns.mullvad.net",
+      "coverage": "111111-",
+      "mode": "Social + family + ads",
+      "notes": "All six Mullvad blocking categories."
+    },
+    {
+      "provider": "mullvad",
+      "name": "Vanilla",
+      "host": "dns.mullvad.net",
+      "coverage": "-------",
+      "mode": "Unfiltered",
+      "notes": "No content filtering."
+    }
+  ]
+}
+  </script>
+
+  <script>
+    'use strict';
+    const catalog = JSON.parse(document.getElementById('catalog').textContent);
+    const {providers, entries} = catalog;
+    const coverageLabels = ['Ads', 'Trackers', 'Threats', 'Adult', 'Gambling', 'Social', 'SafeSearch'];
+    const search = document.getElementById('search');
+    const providerSelect = document.getElementById('provider');
+    const sortSelect = document.getElementById('sort');
+    const cards = document.getElementById('cards');
+    const tableBody = document.getElementById('comparison-body');
+    const moreButton = document.getElementById('more');
+    const toast = document.getElementById('toast');
+    const state = {filter: 'all', limit: 12, selected: new Set(), favorites: new Set(), favoritesOnly: false};
+    let toastTimer;
+
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, char => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      })[char]);
+    }
+
+    function externalLink(url, label, context = label) {
+      return '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener noreferrer" aria-label="' +
+        escapeHtml(context + ' (opens in a new tab)') + '">' + escapeHtml(label) + ' ↗</a>';
+    }
+
+    function isClosed(entry) {
+      const retires = providers[entry.provider].retires;
+      return Boolean(retires && new Date().toISOString().slice(0, 10) >= retires);
+    }
+
+    function lifecycle(entry) {
+      const provider = providers[entry.provider];
+      if (isClosed(entry)) return 'Closure date reached: ' + provider.retires;
+      return provider.retires ? 'Closes ' + provider.retires : 'Listed at review';
+    }
+
+    function filteredEntries() {
+      const query = search.value.trim().toLocaleLowerCase();
+      const list = entries.filter(entry => {
+        const provider = providers[entry.provider];
+        const covered = coverageLabels.filter((label, index) => entry.coverage[index] === '1').join(' ');
+        const text = [provider.name, entry.name, entry.host, entry.mode, entry.notes, covered].join(' ').toLocaleLowerCase();
+        const categories = {ads: 0, threat: 2, adult: 3, social: 5};
+        const matchesCategory = state.filter === 'all' ||
+          (Object.hasOwn(categories, state.filter) && entry.coverage[categories[state.filter]] === '1') ||
+          (state.filter === 'unfiltered' && entry.mode === 'Unfiltered') ||
+          (state.filter === 'retiring' && Boolean(provider.retires));
+        return (!state.favoritesOnly || state.favorites.has(entry.host)) && matchesCategory && (providerSelect.value === 'all' || entry.provider === providerSelect.value) &&
+          (!query || text.includes(query));
+      });
+      if (sortSelect.value === 'provider') {
+        list.sort((a, b) => (providers[a.provider].name + a.name).localeCompare(providers[b.provider].name + b.name));
+      } else if (sortSelect.value === 'host') {
+        list.sort((a, b) => a.host.localeCompare(b.host));
+      }
+      return list;
+    }
+
+    function copyButton(entry) {
+      if (isClosed(entry)) return '<span class="small status">Closed</span>';
+      return '<button class="copy" data-host="' + escapeHtml(entry.host) +
+        '" aria-label="Copy ' + escapeHtml(entry.host) + '">Copy</button>';
+    }
+
+    function sourceLinks(entry) {
+      const provider = providers[entry.provider];
+      return externalLink(provider.portal, 'Portal', provider.name + ' portal') +
+        externalLink(provider.source, 'Documentation', entry.name + ' hostname documentation') +
+        (entry.categorySource ? externalLink(entry.categorySource, 'Filtering evidence') : '') +
+        (entry.listSource ? externalLink(entry.listSource, 'Blocklist', entry.name + ' list maintainer') : '') +
+        (provider.notice ? externalLink(provider.notice, 'Closure notice') : '');
+    }
+
+    function profileActions(entry) {
+      const host = escapeHtml(entry.host);
+      return '<div class="profile-actions"><button class="ghost" data-compare="' + host + '" aria-label="Compare ' + host + '" aria-pressed="' + state.selected.has(entry.host) + '">' + (state.selected.has(entry.host) ? 'Selected' : 'Compare') + '</button><button class="ghost" data-favorite="' + host + '" aria-label="Favorite ' + host + '" aria-pressed="' + state.favorites.has(entry.host) + '">' + (state.favorites.has(entry.host) ? 'Saved' : 'Favorite') + '</button></div>';
+    }
+
+    function renderCards(list) {
+      const visible = list.slice(0, state.limit);
+      cards.innerHTML = visible.length ? visible.map(entry => {
+        const provider = providers[entry.provider];
+        const tags = coverageLabels.filter((label, index) => entry.coverage[index] === '1');
+        return '<article class="card"><div class="card-top"><span class="provider">' +
+          escapeHtml(provider.name) + '</span><span class="tag ' + (provider.retires ? 'status' : '') + '">' +
+          escapeHtml(provider.retires ? lifecycle(entry) : entry.mode) + '</span></div><h3>' +
+          escapeHtml(entry.name) + '</h3><div class="badge-row">' +
+          (tags.length ? tags.map(tag => '<span class="badge good">' + tag + '</span>').join('') :
+            '<span class="badge">No ad-blocking category</span>') +
+          '</div><p class="note">' + escapeHtml(entry.notes) + '</p><div class="host"><code>' +
+          escapeHtml(entry.host) + '</code>' + copyButton(entry) + '</div><p class="meta">' +
+          escapeHtml(provider.access) + ' · DoT</p>' + profileActions(entry) + '<div class="card-links">' + sourceLinks(entry) + '</div></article>';
+      }).join('') : '<div class="empty">No matching profiles. Reset the filters or try a broader search.</div>';
+      moreButton.hidden = visible.length >= list.length;
+      moreButton.textContent = 'Show ' + Math.min(12, list.length - visible.length) + ' more profiles';
+      document.getElementById('page-count').textContent = visible.length + ' cards shown · ' + list.length + ' matching rows in the table';
+    }
+
+    function renderTable(list) {
+      tableBody.innerHTML = list.length ? list.map(entry => {
+        const provider = providers[entry.provider];
+        return '<tr><th scope="row">' + escapeHtml(provider.name) + '<small>' + escapeHtml(entry.name) +
+          '</small></th><td><code>' + escapeHtml(entry.host) + '</code>' + copyButton(entry) + profileActions(entry) + '</td>' +
+          [...entry.coverage].map(flag => '<td>' + (flag === '1' ? '<span class="good">Yes</span>' :
+            '<span aria-label="Not advertised">—</span>') + '</td>').join('') +
+          '<td>' + escapeHtml(entry.mode) + '</td><td>' + escapeHtml(provider.access) +
+          '</td><td class="' + (provider.retires ? 'status' : '') + '">' + escapeHtml(lifecycle(entry)) +
+          '</td><td class="notes-cell">' + escapeHtml(entry.notes) + '</td><td class="notes-cell">' +
+          escapeHtml(provider.policy) + '</td><td class="notes-cell">' + sourceLinks(entry) + '</td></tr>';
+      }).join('') : '<tr><td colspan="15">No matching profiles. Change the directory filters above.</td></tr>';
+      document.getElementById('table-count').textContent = list.length + ' rows';
+      document.getElementById('export').disabled = list.length === 0;
+    }
+
+    function render() {
+      const list = filteredEntries();
+      document.getElementById('result').textContent = list.length + ' of ' + entries.length + ' public profiles';
+      renderCards(list);
+      renderTable(list);
+      document.dispatchEvent(new Event('guide:render'));
+    }
+
+    function showToast(message, failed = false) {
+      clearTimeout(toastTimer);
+      toast.textContent = message;
+      toast.classList.toggle('error', failed);
+      toast.classList.add('show');
+      toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
+    }
+
+    async function copyHost(button) {
+      const host = button.dataset.host;
+      let copied = false;
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(host);
+          copied = true;
+        }
+      } catch {
+        // Browser permissions can reject the modern Clipboard API.
+      }
+      if (!copied) {
+        const input = document.createElement('textarea');
+        input.value = host;
+        input.setAttribute('aria-label', 'Hostname to copy');
+        input.style.cssText = 'position:fixed;left:-9999px;top:0';
+        document.body.append(input);
+        try {
+          input.select();
+          copied = document.execCommand('copy');
+        } catch {
+          copied = false;
+        } finally {
+          input.remove();
+          button.focus({preventScroll: true});
+        }
+      }
+      if (!copied) {
+        showToast('Clipboard unavailable. Select the hostname text and copy it manually.', true);
+        return;
+      }
+      showToast('Copied: ' + host);
+      button.textContent = 'Copied';
+      button.classList.add('copied');
+      setTimeout(() => {
+        button.textContent = 'Copy';
+        button.classList.remove('copied');
+      }, 1800);
+    }
+
+    function downloadComparison() {
+      const headers = ['Provider', 'Profile', 'Android hostname', ...coverageLabels,
+        'Purpose', 'Access', 'Lifecycle', 'Profile notes', 'Service limits / policy',
+        'Provider portal', 'Hostname documentation', 'Blocklist source', 'Closure notice', 'Reviewed', 'Filtering evidence'];
+      const rows = filteredEntries().map(entry => {
+        const provider = providers[entry.provider];
+        return [provider.name, entry.name, entry.host,
+          ...[...entry.coverage].map(flag => flag === '1' ? 'Yes' : 'Not advertised'),
+          entry.mode, provider.access, lifecycle(entry), entry.notes, provider.policy,
+          provider.portal, provider.source, entry.listSource || '', provider.notice || '', catalog.reviewed, entry.categorySource || provider.source];
+      });
+      const csv = [headers, ...rows].map(row => row.map(value => '"' + String(value).replace(/"/g, '""') + '"').join(',')).join('\r\n');
+      const url = URL.createObjectURL(new Blob(['\uFEFF' + csv], {type: 'text/csv;charset=utf-8'}));
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'private-dns-comparison-' + catalog.reviewed + '.csv';
+      document.body.append(link);
+      link.click();
+      link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    }
+
+    for (const [key, provider] of Object.entries(providers).sort((a, b) => a[1].name.localeCompare(b[1].name))) {
+      providerSelect.add(new Option(provider.name, key));
+    }
+    document.getElementById('count').textContent = entries.length;
+    document.getElementById('ad-count').textContent = entries.filter(entry => entry.coverage[0] === '1').length;
+    document.getElementById('provider-count').textContent = Object.keys(providers).length;
+
+    function applyFilterChange() { state.limit = 12; render(); }
+    search.addEventListener('input', applyFilterChange);
+    providerSelect.addEventListener('change', applyFilterChange);
+    sortSelect.addEventListener('change', applyFilterChange);
+    document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+      state.filter = button.dataset.filter;
+      document.querySelectorAll('[data-filter]').forEach(chip => {
+        chip.classList.toggle('active', chip === button);
+        chip.setAttribute('aria-pressed', String(chip === button));
+      });
+      applyFilterChange();
+    }));
+    document.getElementById('reset').addEventListener('click', () => {
+      search.value = '';
+      providerSelect.value = 'all';
+      sortSelect.value = 'guide';
+      document.querySelector('[data-filter="all"]').click();
+    });
+    moreButton.addEventListener('click', () => {
+      const firstNewIndex = state.limit;
+      state.limit += 12;
+      renderCards(filteredEntries());
+      cards.children[firstNewIndex]?.querySelector('button, a')?.focus({preventScroll: true});
+    });
+    for (const container of [cards, tableBody]) {
+      container.addEventListener('click', event => {
+        const button = event.target.closest('button[data-host]');
+        if (button) copyHost(button);
+      });
+    }
+    document.getElementById('export').addEventListener('click', downloadComparison);
+    document.getElementById('theme').addEventListener('click', event => {
+      const light = document.documentElement.classList.toggle('light');
+      event.currentTarget.setAttribute('aria-pressed', String(light));
+      event.currentTarget.textContent = light ? 'Dark theme' : 'Light theme';
+    });
+    render();
+  </script>
+  <script src="guide-core.js"></script>
+  <script src="guide-data.js"></script>
+  <script src="guide.js"></script>
+</body>
+</html>
